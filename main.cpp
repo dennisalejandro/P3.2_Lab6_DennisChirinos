@@ -3,6 +3,7 @@
 #include <vector>
 #include <fstream>
 #include <sstream>
+#include <exception>
 #include "Persona.h"
 #include "AirBender.h"
 #include "FireBender.h"
@@ -197,9 +198,13 @@ int main() {
 			} break;
 			case 2: {
 				cout << "Borrar Cual? \n";
-				int del = Listar(vList, true);
-				delete vList->at(del);
-				vList->erase(vList->begin() + del);
+				try {
+					int del = Listar(vList, true);
+					delete vList->at(del);
+					vList->erase(vList->begin() + del);
+				} catch (exception e) {
+					cout << "Error, por favor ingresar otra vez\n";
+				}
 			} break;
 			case 3: {
 				MISCOLES();
