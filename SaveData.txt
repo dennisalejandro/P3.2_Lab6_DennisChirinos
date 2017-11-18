@@ -1,0 +1,1 @@
+Nacion: Ninguna Nombre: dennis Edad: 12 Sexo: 12 Num Trabajos: 12 Fuerza: 12 Velocidad: 12
